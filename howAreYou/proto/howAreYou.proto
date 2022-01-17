@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package howAreYou;
+
+option go_package = "./proto;howAreYou";
+
+service HowAreYou {
+	rpc GetUserInfo(Request) returns (Response) {}
+}
+
+message Request {
+
+}
+
+message Response {
+	string Name = 1;
+	uint32 Age =2;
+}
